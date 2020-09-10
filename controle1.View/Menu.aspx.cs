@@ -23,5 +23,15 @@ namespace controle1.View
         {
             Response.Redirect("Funcionario.aspx");
         }
+
+        protected void Btncard_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Cardex.aspx");
+        }
+
+        protected void btnCo_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Conversa.aspx");
+        }
     }
 }

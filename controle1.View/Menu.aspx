@@ -26,10 +26,10 @@
         <asp:Button ID="btnpro" runat="server" OnClick="Button1_Click" Text="Produtos" />
         <br />
         <br />
-        <asp:Button ID="btnCo" runat="server" Text="Comentarios" />
+        <asp:Button ID="btnCo" runat="server" Text="Comentarios" OnClick="btnCo_Click" />
         <br />
         <br />
-        <asp:Button ID="Btncard" runat="server" Text="Cardex" />
+        <asp:Button ID="Btncard" runat="server" Text="Cardex" OnClick="Btncard_Click" />
     </form>
 </body>
 </html>

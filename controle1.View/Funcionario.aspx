@@ -35,7 +35,7 @@
             <br />
             <br />
             CPF<br />
-            <asp:TextBox ID="txtcpf" runat="server"></asp:TextBox>
+            <asp:TextBox ID="txtcpf" runat="server" MaxLength="14"  pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" ></asp:TextBox>
             <br />
             <br />
             <asp:Button ID="btnentrar" runat="server" OnClick="btnentrar_Click" Text="Cadastra" />

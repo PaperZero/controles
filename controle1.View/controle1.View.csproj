@@ -67,16 +67,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cardex.aspx" />
+    <Content Include="Conversa.aspx" />
     <Content Include="CssLogin.css" />
     <Content Include="CssMenu.css" />
     <Content Include="Funcionario.aspx" />
     <Content Include="JSmenu.js" />
     <Content Include="Menu.aspx" />
+    <Content Include="Notas.aspx" />
     <Content Include="Produtos.aspx" />
     <Content Include="Web.config" />
     <Content Include="Login.aspx" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cardex.aspx.cs">
+      <DependentUpon>Cardex.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cardex.aspx.designer.cs">
+      <DependentUpon>Cardex.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Conversa.aspx.cs">
+      <DependentUpon>Conversa.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Conversa.aspx.designer.cs">
+      <DependentUpon>Conversa.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Funcionario.aspx.cs">
       <DependentUpon>Funcionario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -90,6 +107,13 @@
     </Compile>
     <Compile Include="Menu.aspx.designer.cs">
       <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Notas.aspx.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Notas.aspx.designer.cs">
+      <DependentUpon>Notas.aspx</DependentUpon>
     </Compile>
     <Compile Include="Produtos.aspx.cs">
       <DependentUpon>Produtos.aspx</DependentUpon>

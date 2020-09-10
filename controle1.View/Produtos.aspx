@@ -33,12 +33,12 @@
             <asp:TextBox ID="txtmov" runat="server"></asp:TextBox>
             <br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <asp:Button ID="btnmov" runat="server" Text="Movimentar" OnClick="btnmov_Click" />
+            <asp:Button ID="btnmov" runat="server" Text="Movimentar" placeholder="Pesquise um produto primeiro" OnClick="btnmov_Click" />
             &nbsp;&nbsp;&nbsp;
             <asp:RadioButton ID="rbsoma" runat="server" Text="soma" />
             <br />
             Validade<br />
-            <asp:TextBox ID="txtval" runat="server"  MaxLength="11"></asp:TextBox>
+            <asp:TextBox ID="txtval" runat="server"  MaxLength="11" pattern="\d{2}\/\d{2}/\d{4}"></asp:TextBox>
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:RadioButton ID="rbtira" runat="server" Text="tira" />
             <br />

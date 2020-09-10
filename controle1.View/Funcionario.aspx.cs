@@ -20,7 +20,14 @@ namespace controle1.View
         protected void btnentrar_Click(object sender, EventArgs e)
 
         {
-            //preciso pegar os erros
+
+            if (txtusu.Text  == null || txtsen.Text == null || txtcar.Text == null || txtcpf == null)
+            {
+                txtusu.Text = "preencha todos os campos";
+
+                return;
+            }
+            
 
 
 
@@ -34,6 +41,8 @@ namespace controle1.View
 
             //retorna o objeto para a dal
             objpri.Cadastro(objpri);
+
+            atualiza();
         }
 
         protected void btnpesquisa_Click(object sender, EventArgs e)
@@ -67,13 +76,20 @@ namespace controle1.View
         protected void btntudo_Click(object sender, EventArgs e)
         {
 
-            controle.DAL.DALfuncionario objpri = new DALfuncionario();
-            objpri.tudo(objpri);
+        //    controle.DAL.DALfuncionario objpri = new DALfuncionario();
+        //    objpri.tudo(objpri);
 
         }
 
         protected void btnedi_Click(object sender, EventArgs e)
         {
+
+            if (txtusu.Text == null || txtsen.Text == null || txtcar.Text == null || txtcpf == null)
+            {
+                txtusu.Text = "preencha todos os campos";
+                return;
+            }
+
             controle.DAL.DALfuncionario objpri = new DALfuncionario();
 
             objpri.IDfuncionario = Convert.ToInt32(txtid.Text);
@@ -86,6 +102,7 @@ namespace controle1.View
 
             txtcpf.Enabled = true;
             txtcpf.Text = string.Empty;
+            atualiza();
 
         }
 

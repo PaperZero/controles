@@ -10,7 +10,7 @@
 namespace controle1.View {
     
     
-    public partial class WebForm1 {
+    public partial class Cardex {
         
         /// <summary>
         /// Controle form1.
@@ -22,30 +22,21 @@ namespace controle1.View {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Controle txtusu.
+        /// Controle gcardex.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtusu;
+        protected global::System.Web.UI.WebControls.GridView gcardex;
         
         /// <summary>
-        /// Controle txtsenha.
+        /// Controle btnatu.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtsenha;
-        
-        /// <summary>
-        /// Controle BtnLogin.
-        /// </summary>
-        /// <remarks>
-        /// Campo gerado automaticamente.
-        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlButton BtnLogin;
+        protected global::System.Web.UI.WebControls.Button btnatu;
     }
 }

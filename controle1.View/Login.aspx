@@ -19,13 +19,16 @@
     
     
    
-      <input type="text" placeholder="USUARIO" runat="server" id="txtusu"/>
+      <asp:TextBox type="text" placeholder="USUARIO" runat="server" ID="txtusu"> </asp:TextBox>
       
 
-      <input type="password" placeholder="SENHA" runat="server" id="txtsenha"/>
+   <asp:TextBox type="password" placeholder="SENHA" runat="server" id="txtsenha"> </asp:TextBox>
 
        
       <button id="BtnLogin" runat="server" onserverclick="BtnLogin_Click">login</button>
+     
+    
+      
      
     
   </div>
