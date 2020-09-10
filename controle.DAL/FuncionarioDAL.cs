@@ -133,7 +133,33 @@ namespace controle.DAL
         }
 
        
+        public DALfuncionario logon(DALfuncionario funcionario)
+        {
 
+            SqlCommand cmd = new SqlCommand("select *from Funcionario where nome = @login and senha = @senha", conn);
+
+            cmd.Parameters.AddWithValue("@login", login);
+            cmd.Parameters.AddWithValue("@senha", senha);
+
+            SqlDataReader dr = cmd.ExecuteReader();
+
+            DALfuncionario objlogon = new DALfuncionario();
+
+            if (dr.Read())
+            {
+                objlogon.IDfuncionario = Convert.ToInt32(dr["IDfuncionario"]);
+                objlogon.login = dr["nome"].ToString();
+                objlogon.senha = dr["senha"].ToString();
+                objlogon.cargo = dr["cargo"].ToString();
+                objlogon.CPF = dr["CPF"].ToString();
+
+
+            }
+            return objlogon;
+
+
+
+        }
 
     }
 }

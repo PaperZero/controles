@@ -65,6 +65,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CardexDAL.cs" />
+    <Compile Include="ConversaDAL.cs" />
     <Compile Include="FuncionarioDAL.cs" />
     <Compile Include="ProdutoDAL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
