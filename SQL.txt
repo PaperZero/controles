@@ -1,0 +1,96 @@
+create table Funcionario (
+	IdFuncionario int identity primary key,
+	Nome varchar(50) not null,
+	CPF char(14) not null,
+	Cargo varchar(40) not null,
+	Senha varchar(18) not null,
+
+	constraint UQ_CPF unique (CPF),
+)
+
+insert into Funcionario values ( 'primeiro', '472,572,788-14', 'teste', '123')
+
+select *from Funcionario
+
+create table Produto (
+	IdProduto int identity(1,1) primary key,
+	Nome_Produto varchar(50) not null,
+	Preco decimal(5,2) not null,
+	Quantidade int not null,
+	Validade varchar(20) not null,
+	Entrada varchar(20) not null
+	
+
+	
+	
+)
+
+set dateformat dmy insert into Produto values ('banana', 12.00, 3, '17/9/2020', '12/04/2020' )
+
+
+select Validade, Quantidade, Preco from Produto where Nome_Produto = 'banana'
+
+
+create table Cardex (
+	idCardex int identity(1,1) primary key,
+	IdProduto int not null,
+	Produto varchar(50) not null,
+	Quantidade int not null,
+	Entrada varchar(20) not null,
+	Validade varchar(20) not null,
+	Saida varchar(20) ,
+	
+	
+	constraint FK_IdProduto_Cardex foreign key (IdProduto) references Produto (IdProduto)
+)
+
+set dateformat dmy insert into Cardex values (1, 'banana', 3, '17/4/2020', '17/9/2020', null )
+
+
+create table Comentario (
+	IdComentario int identity(1,1) primary key,
+	Autor varchar (20),
+	Texto varchar (200) not null,
+
+
+)
+
+insert into Comentario values ('ninguem', 'primeiro')
+
+
+
+select *from Produto
+select *from Funcionario
+select *from Cardex
+select *from Comentario
+
+
+-- comando SELECT -- Consulta
+-- sintaxe: SELECT colunas 
+            FROM tabelas 
+            [ WHERE condicao    -- filtrar dados
+            GROUP BY coluna     -- agrupar dados
+              HAVING condicao   -- filtrar grupos
+            ORDER BY coluna ]   -- [] - uso opcional
+
+-- funções
+select count(codigo) as 'QTD' from funcionarios;
+-- count() - função que conta
+
+select sum(salario) as 'Soma' from funcionarios;
+-- sum() - função que soma os valores numéricos
+
+select max(salario) as 'Maior Salario' from funcionarios;
+-- max()  - função que mostra o maior valor armazenado na coluna
+
+select min(salario) as 'Menor Salario' from funcionarios;
+-- min()  - função que mostra o menor valor armazenado na coluna
+
+select avg(salario) as 'media de salario' from funcionarios;
+-- avg()  - função que mostra a média
+
+SELECT SUM(SALARIO), CARGO
+FROM FUNCIONARIOS
+WHERE CARGO = 'PROFESSOR'
+GROUP BY CARGO
+
